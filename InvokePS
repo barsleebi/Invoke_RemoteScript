@@ -1,0 +1,5 @@
+$srvs = gc C:\BTJ\Putty\Server_List.info
+foreach($svr in $srvs){
+cp C:\temp\test_Cmd.ps1 \\$srv\c$\temp\
+Invoke-Command -ComputerName $srv -FilePath "C:\temp\test_Cmd.ps1"
+}
